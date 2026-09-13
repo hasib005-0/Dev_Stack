@@ -1,4 +1,4 @@
-import { SiJavascript } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import type { ReactNode } from "react";
 
 interface Technology {
@@ -18,14 +18,14 @@ const Card8 = ({ addToStack, isSelected }: CardProps) => {
         id: 8,
         name: "JavaScript",
         category: "Frontend",
-        icon: <SiJavascript />,
+        icon: <SiTypescript />,
     };
 
     return (
         <div className="w-full h-full rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
             <div className="flex items-start justify-between mt-5">
                 <div className="text-3xl text-yellow-400">
-                    <SiJavascript />
+                    <SiTypescript />
                 </div>
 
                 <span className="rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-500">
