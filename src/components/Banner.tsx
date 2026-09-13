@@ -21,11 +21,11 @@ const Banner = () => {
                     </p>
 
                     <div className="flex gap-4 mt-6">
-                        <button className="bg-linear-to-r from-orange-600 to-pink-600 text-white px-5 py-2 rounded-md text-xl font-semibold">
+                        <button className="bg-linear-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-purple-600 text-white px-5 py-2 rounded-md text-xl font-semibold cursor-pointer transition-all duration-300">
                             Explore Technologies
                         </button>
 
-                        <button className="border border-gray-200 px-5 py-2 rounded-md text-xl">
+                        <button className="border border-gray-200 px-5 py-2 rounded-md text-xl cursor-pointer">
                             Learn More
                         </button>
                     </div>
