@@ -34,16 +34,27 @@ const Card = () => {
         }
 
         setStack((prev) => [...prev, technology]);
-
         toast.success(`${technology.name} added to your stack`);
     };
 
     const removeFromStack = (id: number) => {
+        const technology = stack.find((item) => item.id === id);
+
         setStack((prev) => prev.filter((item) => item.id !== id));
+
+        if (technology) {
+            toast.error(`${technology.name} removed from your stack`);
+        }
     };
 
     const removeAll = () => {
+        if (stack.length === 0) {
+            toast.info("Your stack is already empty");
+            return;
+        }
+
         setStack([]);
+        toast.error("All technologies removed from your stack");
     };
 
     const isSelected = (id: number) => {

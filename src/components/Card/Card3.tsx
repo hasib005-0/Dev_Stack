@@ -38,7 +38,7 @@ const Card3 = ({ addToStack, isSelected }: CardProps) => {
             </h2>
 
             <p className="mt-6 text-sm leading-5 text-gray-500">
-                A lightweight, JavaScript framework for building fast, interactive web interfaces.
+                A lightweight, JavaScript framework for building fast and interactive web interfaces.
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
