@@ -1,6 +1,19 @@
 import { SiSvelte } from "react-icons/si";
+import type { ReactNode } from "react";
 
-const Card3 = ({ addToStack, isSelected }) => {
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
+
+interface CardProps {
+    addToStack: (technology: Technology) => void;
+    isSelected: boolean;
+}
+
+const Card3 = ({ addToStack, isSelected }: CardProps) => {
     const svelteData = {
         id: 3,
         name: "Svelte",
@@ -14,21 +27,32 @@ const Card3 = ({ addToStack, isSelected }) => {
                 <div className="text-3xl text-red-500">
                     <SiSvelte />
                 </div>
+
                 <span className="rounded-full bg-red-100 px-3 py-1 text-xs font-medium text-red-500">
                     Fast
                 </span>
             </div>
 
-            <h2 className="mt-6 text-xl font-bold text-gray-900">Svelte</h2>
+            <h2 className="mt-6 text-xl font-bold text-gray-900">
+                Svelte
+            </h2>
 
             <p className="mt-6 text-sm leading-5 text-gray-500">
                 A lightweight, JavaScript framework for building fast, interactive web interfaces.
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
-                <span className="rounded-md bg-gray-50 px-2 py-1">Frontend</span>
-                <span>Beginner-Friendly</span>
-                <span className="text-yellow-500">★ 4.8</span>
+                <span className="rounded-md bg-gray-50 px-2 py-1">
+                    Frontend
+                </span>
+
+                <span>
+                    Beginner-Friendly
+                </span>
+
+                <span className="text-yellow-500">
+                    ★ 4.8
+                </span>
             </div>
 
             <button

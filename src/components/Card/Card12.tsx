@@ -1,6 +1,19 @@
 import { FaDocker } from "react-icons/fa";
+import type { ReactNode } from "react";
 
-const Card12 = ({ addToStack, isSelected }) => {
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
+
+interface CardProps {
+    addToStack: (technology: Technology) => void;
+    isSelected: boolean;
+}
+
+const Card12 = ({ addToStack, isSelected }: CardProps) => {
     const dockerData = {
         id: 12,
         name: "Docker",
@@ -28,9 +41,17 @@ const Card12 = ({ addToStack, isSelected }) => {
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
-                <span className="rounded-md bg-gray-50 px-2 py-1">DevOps</span>
-                <span>Beginner-Friendly</span>
-                <span className="text-yellow-500">★ 4.8</span>
+                <span className="rounded-md bg-gray-50 px-2 py-1">
+                    DevOps
+                </span>
+
+                <span>
+                    Beginner-Friendly
+                </span>
+
+                <span className="text-yellow-500">
+                    ★ 4.8
+                </span>
             </div>
 
             <button

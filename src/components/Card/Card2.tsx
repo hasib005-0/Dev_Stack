@@ -1,6 +1,19 @@
 import { FaVuejs } from "react-icons/fa";
+import type { ReactNode } from "react";
 
-const Card2 = ({ addToStack, isSelected }) => {
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
+
+interface CardProps {
+    addToStack: (technology: Technology) => void;
+    isSelected: boolean;
+}
+
+const Card2 = ({ addToStack, isSelected }: CardProps) => {
     const vueData = {
         id: 2,
         name: "Vue.js",
@@ -14,21 +27,32 @@ const Card2 = ({ addToStack, isSelected }) => {
                 <div className="text-3xl text-green-500">
                     <FaVuejs />
                 </div>
+
                 <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-500">
                     Versatile
                 </span>
             </div>
 
-            <h2 className="mt-6 text-xl font-bold text-gray-900">Vue.js</h2>
+            <h2 className="mt-6 text-xl font-bold text-gray-900">
+                Vue.js
+            </h2>
 
             <p className="mt-6 text-sm leading-5 text-gray-500">
-                An approachable, performant and versetile framework for building web user interfaces.
+                An approachable, performant and versatile framework for building web user interfaces.
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
-                <span className="rounded-md bg-gray-50 px-2 py-1">Frontend</span>
-                <span>Beginner-Friendly</span>
-                <span className="text-yellow-500">★ 4.8</span>
+                <span className="rounded-md bg-gray-50 px-2 py-1">
+                    Frontend
+                </span>
+
+                <span>
+                    Beginner-Friendly
+                </span>
+
+                <span className="text-yellow-500">
+                    ★ 4.8
+                </span>
             </div>
 
             <button

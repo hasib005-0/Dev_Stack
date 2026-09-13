@@ -1,6 +1,19 @@
 import { SiTailwindcss } from "react-icons/si";
+import type { ReactNode } from "react";
 
-const Card11 = ({ addToStack, isSelected }) => {
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
+
+interface CardProps {
+    addToStack: (technology: Technology) => void;
+    isSelected: boolean;
+}
+
+const Card11 = ({ addToStack, isSelected }: CardProps) => {
     const tailwindData = {
         id: 11,
         name: "Tailwind CSS",
@@ -14,6 +27,7 @@ const Card11 = ({ addToStack, isSelected }) => {
                 <div className="text-3xl text-cyan-500">
                     <SiTailwindcss />
                 </div>
+
                 <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-500">
                     Modern
                 </span>
@@ -28,9 +42,17 @@ const Card11 = ({ addToStack, isSelected }) => {
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
-                <span className="rounded-md bg-gray-50 px-2 py-1">Frontend</span>
-                <span>Beginner-Friendly</span>
-                <span className="text-yellow-500">★ 4.9</span>
+                <span className="rounded-md bg-gray-50 px-2 py-1">
+                    Frontend
+                </span>
+
+                <span>
+                    Beginner-Friendly
+                </span>
+
+                <span className="text-yellow-500">
+                    ★ 4.9
+                </span>
             </div>
 
             <button

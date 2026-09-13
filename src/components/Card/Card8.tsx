@@ -1,6 +1,19 @@
 import { SiJavascript } from "react-icons/si";
+import type { ReactNode } from "react";
 
-const Card8 = ({ addToStack, isSelected }) => {
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
+
+interface CardProps {
+    addToStack: (technology: Technology) => void;
+    isSelected: boolean;
+}
+
+const Card8 = ({ addToStack, isSelected }: CardProps) => {
     const javascriptData = {
         id: 8,
         name: "JavaScript",
@@ -14,21 +27,32 @@ const Card8 = ({ addToStack, isSelected }) => {
                 <div className="text-3xl text-yellow-400">
                     <SiJavascript />
                 </div>
+
                 <span className="rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-500">
                     Ubiquitous
                 </span>
             </div>
 
-            <h2 className="mt-6 text-xl font-bold text-gray-900">JavaScript</h2>
+            <h2 className="mt-6 text-xl font-bold text-gray-900">
+                JavaScript
+            </h2>
 
             <p className="mt-6 text-sm leading-5 text-gray-500">
                 A versatile programming language for building interactive websites and modern web applications.
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
-                <span className="rounded-md bg-gray-50 px-2 py-1">Frontend</span>
-                <span>Beginner-Friendly</span>
-                <span className="text-yellow-500">★ 4.9</span>
+                <span className="rounded-md bg-gray-50 px-2 py-1">
+                    Frontend
+                </span>
+
+                <span>
+                    Beginner-Friendly
+                </span>
+
+                <span className="text-yellow-500">
+                    ★ 4.9
+                </span>
             </div>
 
             <button

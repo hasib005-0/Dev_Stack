@@ -1,6 +1,19 @@
 import { SiRedis } from "react-icons/si";
+import type { ReactNode } from "react";
 
-const Card7 = ({ addToStack, isSelected }) => {
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
+
+interface CardProps {
+    addToStack: (technology: Technology) => void;
+    isSelected: boolean;
+}
+
+const Card7 = ({ addToStack, isSelected }: CardProps) => {
     const redisData = {
         id: 7,
         name: "Redis",
@@ -14,21 +27,32 @@ const Card7 = ({ addToStack, isSelected }) => {
                 <div className="text-3xl text-red-500">
                     <SiRedis />
                 </div>
+
                 <span className="rounded-full bg-red-100 px-3 py-1 text-xs font-medium text-red-500">
                     Cache
                 </span>
             </div>
 
-            <h2 className="mt-6 text-xl font-bold text-gray-900">Redis</h2>
+            <h2 className="mt-6 text-xl font-bold text-gray-900">
+                Redis
+            </h2>
 
             <p className="mt-6 text-sm leading-5 text-gray-500">
                 An in-memory data store built for fast caching, real-time and scalable data processing.
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
-                <span className="rounded-md bg-gray-50 px-2 py-1">Database</span>
-                <span>Beginner-Friendly</span>
-                <span className="text-yellow-500">★ 4.8</span>
+                <span className="rounded-md bg-gray-50 px-2 py-1">
+                    Database
+                </span>
+
+                <span>
+                    Beginner-Friendly
+                </span>
+
+                <span className="text-yellow-500">
+                    ★ 4.8
+                </span>
             </div>
 
             <button

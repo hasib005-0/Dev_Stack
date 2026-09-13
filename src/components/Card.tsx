@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { toast } from "react-toastify";
 import Card1 from "./Card/Card1";
 import Card2 from "./Card/Card2";
@@ -13,10 +13,17 @@ import Card10 from "./Card/Card10";
 import Card11 from "./Card/Card11";
 import Card12 from "./Card/Card12";
 
-const Card = () => {
-    const [stack, setStack] = useState([]);
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
 
-    const addToStack = (technology) => {
+const Card = () => {
+    const [stack, setStack] = useState<Technology[]>([]);
+
+    const addToStack = (technology: Technology) => {
         const alreadyExists = stack.some(
             (item) => item.id === technology.id
         );
@@ -31,8 +38,7 @@ const Card = () => {
         toast.success(`${technology.name} added to your stack`);
     };
 
-
-    const removeFromStack = (id) => {
+    const removeFromStack = (id: number) => {
         setStack((prev) => prev.filter((item) => item.id !== id));
     };
 
@@ -40,7 +46,9 @@ const Card = () => {
         setStack([]);
     };
 
-    const isSelected = (id) => stack.some((item) => item.id === id);
+    const isSelected = (id: number) => {
+        return stack.some((item) => item.id === id);
+    };
 
     return (
         <div className="flex flex-col bg-white container mx-auto px-4">
@@ -63,23 +71,70 @@ const Card = () => {
             <div className="grid grid-cols-4 mt-16">
                 <div className="col-span-3 bg-white">
                     <div className="grid grid-cols-3 grid-rows-4 gap-4 mr-4 ml-4 mt-4 mb-4">
-                        <Card1 addToStack={addToStack} isSelected={isSelected(1)} />
-                        <Card2 addToStack={addToStack} isSelected={isSelected(2)} />
-                        <Card3 addToStack={addToStack} isSelected={isSelected(3)} />
-                        <Card4 addToStack={addToStack} isSelected={isSelected(4)} />
-                        <Card5 addToStack={addToStack} isSelected={isSelected(5)} />
-                        <Card6 addToStack={addToStack} isSelected={isSelected(6)} />
-                        <Card7 addToStack={addToStack} isSelected={isSelected(7)} />
-                        <Card8 addToStack={addToStack} isSelected={isSelected(8)} />
-                        <Card9 addToStack={addToStack} isSelected={isSelected(9)} />
-                        <Card10 addToStack={addToStack} isSelected={isSelected(10)} />
-                        <Card11 addToStack={addToStack} isSelected={isSelected(11)} />
-                        <Card12 addToStack={addToStack} isSelected={isSelected(12)} />
+                        <Card1
+                            addToStack={addToStack}
+                            isSelected={isSelected(1)}
+                        />
+
+                        <Card2
+                            addToStack={addToStack}
+                            isSelected={isSelected(2)}
+                        />
+
+                        <Card3
+                            addToStack={addToStack}
+                            isSelected={isSelected(3)}
+                        />
+
+                        <Card4
+                            addToStack={addToStack}
+                            isSelected={isSelected(4)}
+                        />
+
+                        <Card5
+                            addToStack={addToStack}
+                            isSelected={isSelected(5)}
+                        />
+
+                        <Card6
+                            addToStack={addToStack}
+                            isSelected={isSelected(6)}
+                        />
+
+                        <Card7
+                            addToStack={addToStack}
+                            isSelected={isSelected(7)}
+                        />
+
+                        <Card8
+                            addToStack={addToStack}
+                            isSelected={isSelected(8)}
+                        />
+
+                        <Card9
+                            addToStack={addToStack}
+                            isSelected={isSelected(9)}
+                        />
+
+                        <Card10
+                            addToStack={addToStack}
+                            isSelected={isSelected(10)}
+                        />
+
+                        <Card11
+                            addToStack={addToStack}
+                            isSelected={isSelected(11)}
+                        />
+
+                        <Card12
+                            addToStack={addToStack}
+                            isSelected={isSelected(12)}
+                        />
                     </div>
                 </div>
 
                 <div className="col-span-1 bg-white p-4">
-                    <div className="sticky fixed right-5 top-24">
+                    <div className="fixed right-5 top-24 z-40">
                         <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
                             <h2 className="text-xl font-bold text-gray-900">
                                 Your Cart
@@ -112,7 +167,9 @@ const Card = () => {
                                         </div>
 
                                         <button
-                                            onClick={() => removeFromStack(item.id)}
+                                            onClick={() =>
+                                                removeFromStack(item.id)
+                                            }
                                             className="text-gray-400 hover:text-red-500 text-xl"
                                         >
                                             ×

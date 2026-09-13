@@ -1,6 +1,19 @@
 import { FaReact } from "react-icons/fa";
+import type { ReactNode } from "react";
 
-const Card1 = ({ addToStack, isSelected }) => {
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
+
+interface CardProps {
+    addToStack: (technology: Technology) => void;
+    isSelected: boolean;
+}
+
+const Card1 = ({ addToStack, isSelected }: CardProps) => {
     const reactData = {
         id: 1,
         name: "React",

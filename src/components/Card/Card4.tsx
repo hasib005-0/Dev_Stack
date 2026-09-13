@@ -1,6 +1,19 @@
 import { SiNextdotjs } from "react-icons/si";
+import type { ReactNode } from "react";
 
-const Card4 = ({ addToStack, isSelected }) => {
+interface Technology {
+    id: number;
+    name: string;
+    category: string;
+    icon: ReactNode;
+}
+
+interface CardProps {
+    addToStack: (technology: Technology) => void;
+    isSelected: boolean;
+}
+
+const Card4 = ({ addToStack, isSelected }: CardProps) => {
     const nextData = {
         id: 4,
         name: "Next.js",
@@ -16,16 +29,26 @@ const Card4 = ({ addToStack, isSelected }) => {
                 </div>
             </div>
 
-            <h2 className="mt-6 text-xl font-bold text-gray-900">Next.js</h2>
+            <h2 className="mt-6 text-xl font-bold text-gray-900">
+                Next.js
+            </h2>
 
             <p className="mt-6 text-sm leading-5 text-gray-500">
                 A powerful React framework for building fast, scalable, and modern web applications.
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
-                <span className="rounded-md bg-gray-50 px-2 py-1">Frontend</span>
-                <span>Beginner-Friendly</span>
-                <span className="text-yellow-500">★ 4.9</span>
+                <span className="rounded-md bg-gray-50 px-2 py-1">
+                    Frontend
+                </span>
+
+                <span>
+                    Beginner-Friendly
+                </span>
+
+                <span className="text-yellow-500">
+                    ★ 4.9
+                </span>
             </div>
 
             <button
