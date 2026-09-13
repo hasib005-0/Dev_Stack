@@ -34,7 +34,7 @@ const Card8 = ({ addToStack, isSelected }: CardProps) => {
             </div>
 
             <h2 className="mt-6 text-xl font-bold text-gray-900">
-                JavaScript
+                TypeScript
             </h2>
 
             <p className="mt-6 text-sm leading-5 text-gray-500">
