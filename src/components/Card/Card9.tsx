@@ -24,11 +24,11 @@ const Card8 = ({ addToStack, isSelected }: CardProps) => {
     return (
         <div className="w-full h-full rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
             <div className="flex items-start justify-between mt-5">
-                <div className="text-3xl text-yellow-400">
+                <div className="text-3xl text-blue-400">
                     <SiTypescript />
                 </div>
 
-                <span className="rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-500">
+                <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-500">
                     Ubiquitous
                 </span>
             </div>
@@ -38,7 +38,7 @@ const Card8 = ({ addToStack, isSelected }: CardProps) => {
             </h2>
 
             <p className="mt-6 text-sm leading-5 text-gray-500">
-                A versatile programming language for building interactive websites and modern web applications.
+                A versatile programming language for modern interactive websites and web applications.
             </p>
 
             <div className="mt-6 flex items-center justify-between text-xs text-gray-500">
