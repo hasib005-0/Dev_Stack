@@ -134,7 +134,7 @@ const Card = () => {
                 </div>
 
                 <div className="col-span-1 bg-white p-4">
-                    <div className="fixed right-5 top-24 z-40">
+                    <div className="sticky top-24 z-40">
                         <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
                             <h2 className="text-xl font-bold text-gray-900">
                                 Your Cart
