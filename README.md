@@ -1,89 +1,90 @@
-# 🚀 Dev Stack
+# 🧱 Dev Stack Builder
 
-A modern and interactive technology stack builder for developers.
+Dev Stack Builder is a simple and responsive web application that helps developers explore different technologies and build their own development stack.
 
-Dev Stack helps developers explore different frontend, backend, database, and development tools, compare their options, and build a personalized technology stack for their next project.
+Users can browse technologies by category, check their difficulty and rating, and add their favorite technologies to a personal stack. The project is designed with a clean and modern interface and works smoothly on mobile, tablet, and desktop devices.
 
----
+## 🚀 Live Website
+
+https://dev-stack5.netlify.app/
+
+## 📂 GitHub Repository
+
+https://github.com/hasib005-0/Dev_Stack
 
 ## 🛠️ Technologies Used
 
-- *React* – UI development
-- *TypeScript* – Type-safe JavaScript
-- *Tailwind CSS* – Styling and responsive design
-- *Vite* – Fast development and build tooling
-- *React Toastify* – User notifications
-- *JSON* – Technology data management
-- *Git & GitHub* – Version control and deployment
-
----
+- React.js
+- TypeScript
+- Tailwind CSS
+- DaisyUI
+- React-Toastify
+- JSON
+- Vite
+- React Icons
 
 ## ✨ Features
 
-### 1. 🔍 Explore Technologies
+### 1. Explore Technologies
+Browse different frontend, backend, database, language, styling, and DevOps technologies with their descriptions, ratings, difficulty levels, and badges.
 
-Browse a collection of development technologies with useful information such as:
+### 2. Build Your Own Stack
+Add technologies to your personal stack and easily see which technologies you have selected.
 
-- Technology name
-- Category
-- Description
-- Difficulty level
-- Rating
-- Technology badge
+### 3. Responsive & Interactive UI
+The website is fully responsive and includes interactive features such as toast notifications, duplicate prevention, remove options, and a mobile-friendly navigation menu.
 
-### 2. 📚 Build Your Own Stack
+## 📦 Technology Data
 
-Add technologies to your personal stack and see your selected technologies in one place.
+The technology information is stored in a separate JSON file. The application fetches the data dynamically instead of keeping the technology list directly inside the component.
 
-You can also:
+## 🔔 Notifications
 
-- Remove individual technologies
-- Remove all technologies
-- Prevent duplicate technologies from being added
+React-Toastify is used to show notifications when:
 
-### 3. 🔔 Interactive User Feedback
+- A technology is added to the stack
+- A duplicate technology is added
+- A technology is removed
+- All technologies are removed
 
-The application provides instant feedback using React Toastify for important actions:
+## ⏳ Loading State
 
-- Technology added successfully
-- Duplicate technology attempts
-- Technology removed
-- All technologies removed
-- Data loading errors
+A loading spinner is displayed while the technology data is being fetched from the JSON file.
 
+---
 
+# ❓ React Questions & Answers
 
-#React Questions & Answers
+## 1. What is JSX, and why is it used in React?
 
-1. What is JSX, and why is it used in React?
+JSX is a syntax that lets us write HTML-like code inside JavaScript or TypeScript. It makes React components easier to read and helps us describe what the UI should look like.
 
-Ans: JSX is a syntax that lets us write HTML-like code inside JavaScript or TypeScript. It makes React components easier to read and helps us describe what the UI should look like.
+## 2. What is the difference between props and state?
 
-2. What is the difference between props and state?
+Props are used to pass data from a parent component to a child component. State is data that belongs to a component and can change over time.
 
-Ans: Props are data passed from a parent component to a child component. State is data managed inside a component that can change over time.
+In simple words, props come from outside the component, while state is managed inside the component.
 
-3. What does the useState hook do, and where did you use it in this project?
+## 3. What does the `useState` hook do, and where did you use it in this project?
 
-Ans: useState lets a React component store and update data. I used it in "TechnologySection.tsx" to store the selected technologies, loading status, and error state.
+The `useState` hook allows us to store and update data inside a React component.
 
-4. What does the useEffect hook do, and why did you need it to load the JSON data?
+In this project, I used `useState` to store the technology data, loading state, and the technologies selected in the user's stack.
 
-Ans: useEffect runs code after a component renders. I used it in "TechnologySection.tsx" to fetch the technology JSON data when the component loads.
+## 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
 
-5. Why does every item in a .map() list need a unique key prop?
+`useEffect` lets us run some code after a component renders.
 
-Ans: React uses the "key" to identify each item in a list. A unique key helps React efficiently update the correct item when the list changes.
+I used it to fetch the technology data from the JSON file when the Card component loads. After the data is fetched, the technology cards are displayed on the page.
 
-6. What is conditional rendering? Show one place you used it.
+## 5. Why does every item in a `.map()` list need a unique `key` prop?
 
-Ans: Conditional rendering means showing different UI depending on a condition.
+React uses the `key` to identify each item in a list. A unique key helps React understand which item was changed, added, or removed and update the UI efficiently.
 
-I used it to show an empty-stack message when no technologies have been selected:
+For example:
 
-
-{selectedTechnologies.length === 0 ? (
-  <p>Your stack is empty. Add technologies to build your stack.</p>
-) : (
-  // Selected technologies
-)}
+technologies.map((technology) => (
+    <div key={technology.id}>
+        {technology.name}
+    </div>
+))

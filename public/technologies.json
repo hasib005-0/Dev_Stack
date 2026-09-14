@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "React",
+        "category": "Frontend",
+        "description": "A popular JavaScript library for building fast and interactive user interfaces.",
+        "icon": "react",
+        "rating": 4.9,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Popular"
+    },
+    {
+        "id": 2,
+        "name": "Vue.js",
+        "category": "Frontend",
+        "description": "A progressive JavaScript framework for building modern and flexible user interfaces.",
+        "icon": "vue",
+        "rating": 4.8,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Versatile"
+    },
+    {
+        "id": 3,
+        "name": "Svelte",
+        "category": "Frontend",
+        "description": "A modern framework that compiles components into efficient JavaScript at build time.",
+        "icon": "svelte",
+        "rating": 4.8,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Fast"
+    },
+    {
+        "id": 4,
+        "name": "Next.js",
+        "category": "Frontend",
+        "description": "A powerful React framework for building fast, scalable, and modern web applications.",
+        "icon": "nextjs",
+        "rating": 4.9,
+        "difficulty": "Beginner-Friendly",
+        "badge": ""
+    },
+    {
+        "id": 5,
+        "name": "Node.js",
+        "category": "Backend",
+        "description": "A powerful JavaScript runtime for building fast, scalable, and efficient server-side applications.",
+        "icon": "nodejs",
+        "rating": 4.8,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Popular"
+    },
+    {
+        "id": 6,
+        "name": "PostgreSQL",
+        "category": "Database",
+        "description": "A powerful open-source database system built for reliability and advanced data management.",
+        "icon": "postgresql",
+        "rating": 4.9,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Top SQL"
+    },
+    {
+        "id": 7,
+        "name": "Redis",
+        "category": "Database",
+        "description": "An in-memory data store built for fast caching, real-time and scalable data processing.",
+        "icon": "redis",
+        "rating": 4.8,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Cache"
+    },
+    {
+        "id": 8,
+        "name": "JavaScript",
+        "category": "Frontend",
+        "description": "A versatile programming language for building interactive websites and modern web applications.",
+        "icon": "javascript",
+        "rating": 4.9,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Ubiquitous"
+    },
+    {
+        "id": 9,
+        "name": "TypeScript",
+        "category": "Frontend",
+        "description": "A versatile programming language for modern interactive websites and web applications.",
+        "icon": "typescript",
+        "rating": 4.9,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Ubiquitous"
+    },
+    {
+        "id": 10,
+        "name": "Java",
+        "category": "Backend",
+        "description": "A versatile, object-oriented programming language for building scalable applications.",
+        "icon": "java",
+        "rating": 4.7,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Robust"
+    },
+    {
+        "id": 11,
+        "name": "Tailwind CSS",
+        "category": "Frontend",
+        "description": "A utility-first CSS framework for rapidly building modern, responsive user interfaces.",
+        "icon": "tailwind",
+        "rating": 4.9,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Modern"
+    },
+    {
+        "id": 12,
+        "name": "Docker",
+        "category": "DevOps",
+        "description": "A platform for building, packaging, and running applications across different environments.",
+        "icon": "docker",
+        "rating": 4.8,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Containers"
+    }
+]

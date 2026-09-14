@@ -5,13 +5,12 @@ const Banner = () => {
         <section className="container mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-14 lg:py-16">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-6">
 
-                {/* Left Side */}
                 <div className="w-full lg:w-3/5 text-center lg:text-left">
 
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                         Build Your Ideal
                         <br />
-                        <span className="bg-linear-to-r from-orange-600 via-pink-600 to-violet-700 bg-clip-text text-transparent">
+                        <span className="brand-gradient-text">
                             Development Stack
                         </span>
                     </h1>
@@ -22,10 +21,9 @@ const Banner = () => {
                         that fits your next project.
                     </p>
 
-                    {/* Buttons */}
                     <div className="flex flex-row justify-center lg:justify-start gap-2 sm:gap-4 mt-6">
 
-                        <button className="flex-1 sm:flex-none bg-linear-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-purple-600 text-white px-3 sm:px-5 py-2 rounded-md text-sm sm:text-lg md:text-xl font-semibold cursor-pointer transition-all duration-300 whitespace-nowrap">
+                        <button className="flex-1 sm:flex-none brand-gradient hover:opacity-90 text-white px-3 sm:px-5 py-2 rounded-md text-sm sm:text-lg md:text-xl font-semibold cursor-pointer transition-all duration-300 whitespace-nowrap">
                             Explore Technologies
                         </button>
 
@@ -36,7 +34,6 @@ const Banner = () => {
                     </div>
                 </div>
 
-                {/* Right Side */}
                 <div className="w-full lg:w-2/5 flex justify-center">
                     <img
                         src={BannerImg}
