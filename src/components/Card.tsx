@@ -63,25 +63,28 @@ const Card = () => {
 
     return (
         <div className="flex flex-col bg-white container mx-auto px-4">
-            <div className="h-20 bg-white">
-                <span className="text-black text-5xl font-bold">
-                    Explore the
-                </span>
 
-                <span className="font-bold bg-linear-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent text-5xl ml-2">
-                    Technologies
-                </span>
+            <div className="bg-white">
+                <div className="text-center md:text-left">
+                    <span className="text-black text-3xl sm:text-4xl md:text-5xl font-bold">
+                        Explore the
+                    </span>
 
-                <br />
+                    <span className="font-bold bg-linear-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl ml-2">
+                        Technologies
+                    </span>
+                </div>
 
-                <p className="text-gray-500 text-[18px] mt-4">
+                <p className="text-gray-500 text-sm sm:text-base md:text-[18px] mt-4 text-center md:text-left">
                     Pick one technology per category to build your ideal stack
                 </p>
             </div>
 
-            <div className="grid grid-cols-4 mt-16">
-                <div className="col-span-3 bg-white">
-                    <div className="grid grid-cols-3 grid-rows-4 gap-4 mr-4 ml-4 mt-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 mt-10 md:mt-16">
+
+                <div className="col-span-1 md:col-span-3 bg-white">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mr-4 ml-4 mt-4 mb-4">
+
                         <Card1
                             addToStack={addToStack}
                             isSelected={isSelected(1)}
@@ -141,12 +144,15 @@ const Card = () => {
                             addToStack={addToStack}
                             isSelected={isSelected(12)}
                         />
+
                     </div>
                 </div>
 
                 <div className="col-span-1 bg-white p-4">
                     <div className="sticky top-24 z-40">
+
                         <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+
                             <h2 className="text-xl font-bold text-gray-900">
                                 Your Cart
                             </h2>
@@ -156,12 +162,14 @@ const Card = () => {
                             </p>
 
                             <div className="mt-5 space-y-3">
+
                                 {stack.map((item) => (
                                     <div
                                         key={item.id}
                                         className="flex items-center justify-between border border-gray-200 rounded-lg px-3 py-3"
                                     >
                                         <div className="flex items-center gap-3">
+
                                             <div className="text-xl">
                                                 {item.icon}
                                             </div>
@@ -175,6 +183,7 @@ const Card = () => {
                                                     {item.category}
                                                 </p>
                                             </div>
+
                                         </div>
 
                                         <button
@@ -187,6 +196,7 @@ const Card = () => {
                                         </button>
                                     </div>
                                 ))}
+
                             </div>
 
                             {stack.length === 0 && (
@@ -203,9 +213,12 @@ const Card = () => {
                                     Remove All
                                 </button>
                             )}
+
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
     );
