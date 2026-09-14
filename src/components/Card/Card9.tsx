@@ -13,10 +13,10 @@ interface CardProps {
     isSelected: boolean;
 }
 
-const Card8 = ({ addToStack, isSelected }: CardProps) => {
+const Card9 = ({ addToStack, isSelected }: CardProps) => {
     const javascriptData = {
-        id: 8,
-        name: "JavaScript",
+        id: 9,
+        name: "TypeScript",
         category: "Frontend",
         icon: <SiTypescript />,
     };
@@ -69,4 +69,4 @@ const Card8 = ({ addToStack, isSelected }: CardProps) => {
     );
 };
 
-export default Card8;
+export default Card9;
